@@ -1,0 +1,12 @@
+body {
+    min-width: 372px;
+}
+
+.body-config {
+    min-height: 100vh;
+}
+
+p { 
+    text-align: justify; 
+    text-justify: inter-word;
+ }
