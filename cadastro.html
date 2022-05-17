@@ -95,7 +95,7 @@
                 <div class="container">
                     <h1>Informe seus dados, por favor</h1>
                     <hr>
-                    <form method="get" action="." class="mt-3">
+                    <form method="POST" action="form.php" class="mt-3">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 <fieldset class="row gx-3">
@@ -105,7 +105,8 @@
                                         <label for="txtNome">Nome</label>
                                     </div>
                                     <div class="form-floating mb-3 col-md-6 col-xl-4">
-                                        <input class="form-control" placeholder="CPF" onkeyup="cpfCheck(this)" maxlength="14" onkeydown="javascript: fMasc( this, mCPF );"> <span id="cpfResponse" type="text" id="cpf" />
+                                        <input class="form-control" placeholder="CPF" onkeyup="cpfCheck(this)" maxlength="14"  required name="txtCPF" onkeydown="javascript: fMasc( this, mCPF );" >
+                                        <span id="cpfResponse" type="text" id="cpf" />
                                         <label for="txtCPF">CPF</label>
                                     </div>
                                     <div class="form-floating mb-3 col-md-6 col-xl-4">
@@ -119,12 +120,12 @@
                                 <fieldset class="row gx-3">
                                     <legend>Dados de Acesso</legend>
                                     <div class="form-floating mb-3 col-md-7">
-                                        <input class="form-control" type="email" id="txtEmail" placeholder=" " />
+                                        <input class="form-control" type="email" id="txtEmail" placeholder=" " required/>
                                         <label for="txtEmail">E-mail</label>
                                     </div>
                                     <div class="form-floating mb-3 col-md-5">
-                                        <input class="form-control" placeholder=" " type="text" id="txtTelefone" />
-                                        <label for="txtTelefone">Telefone</label>
+                                        <input class="form-control" placeholder=" " onkeyup="mask(this, mphone)" maxlength="15" type="text" id="txtTelefone" />
+                                        <label for="txtTelefone">Celular</label>
                                     </div>
                                 </fieldset>                                   
                                  <fieldset class="row gx-3">
@@ -144,12 +145,11 @@
                                 <fieldset class="row gx-3">
                                     <legend>Endereço</legend>
                                     <div class="form-floating mb-3 col-md-6 col-lg-4">
-                                        <input name="cep" maxlength="9" value="" class="form-control" type="text" id="cep" placeholder=" "
-                                        onblur="pesquisacep(this.value);" />
+                                        <input name="cep" maxlength="9" value="" class="form-control" type="text" id="cep" placeholder=" "onblur="pesquisacep(this.value);" required/>
                                         <label for="txtCEP">CEP</label>
                                     </div>
                                     <div class="form-floating mb-3 col-md-4">
-                                        <input name="rua" class="form-control" type="text" size="60" id="rua" placeholder=" " />
+                                        <input name="rua" class="form-control" type="text" size="60" id="rua" placeholder=" " required/>
                                         <label for="txtRua">Rua</label>
                                     </div>
                                     <div class="form-floating mb-3 col-md-4">
@@ -166,7 +166,7 @@
                                             </div>
                                     <div class="clearfix"></div>
                                     <div class="form-floating mb-3 col-md-4">
-                                        <input class="form-control" type="text" id="txtNumero" placeholder=" " />
+                                        <input class="form-control" type="text" id="txtNumero" placeholder=" " required/>
                                         <label for="txtNumero">Número</label>
                                     </div>
                                     <div class="form-floating mb-3 col-md-8">
@@ -189,15 +189,13 @@
                         </div>
                         <div class="mb-3 text-left">
                             <a class="btn btn-lg btn-light btn-outline-success" href="">Cancelar</a>
-                            <input type="button" value="Criar meu cadastro" class="btn btn-lg btn-success"
-                                onclick="window.location.href='/confirmarcadastro.html'" />
+                            <input type="submit" value="Criar meu cadastro" class="btn btn-lg btn-success"
+                                onclick="window.location.href='confirmarcadastro.html'" />
                         </div>
                     </form>
+
                 </div>
             </main>
-
-            
-
             <footer class="border-top text-muted bg-light">
                 <div class="container">
                     <div class="row py-4">
