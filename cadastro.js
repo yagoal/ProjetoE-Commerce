@@ -153,3 +153,17 @@ cpfCheck = function (el) {
         document.getElementById('cpfResponse').innerHTML = document.getElementById('cpfResponse').innerHTML = string
     } 
 }
+
+function validarSenha(){
+    
+   let senha =  cadastro.senha.value;
+   let confSenha =  cadastro.confirmarSenha.value;
+   if (senha === "" || senha.length < 8 || senha != confSenha) {
+       alert('Preenchimento de senha inválido')
+       cadastro.senha.focus();
+       return false;
+   }
+   return true;
+
+}
+
