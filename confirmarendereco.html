@@ -91,87 +91,61 @@
 
             <main class="flex-fill">
                 <div class="container">
-                    <h1>Confira os Itens</h1>
-                    <h5>Após isso clique em <b>Continuar</b> para prosseguir para a <b>seleção do endereço de entrega</b>.</h3>
-                    <ul class="list-group mb-3">
-                        <li class="list-group-item py-3">
-                            <div class="row g-3">
-                                <div class="col-4 col-md-3 col-lg-2">
-                                    <a href="#">
-                                        <img src="img/produtos/body.png" class="img-thumbnail">
-                                    </a>
-                                </div>
-                                <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
-                                    <h4>
-                                        <b><a href="#" class="text-decoration-none text-success">
-                                            Macacão Bebê Plush</a></b>
-                                    </h4>
-                                    <h5>
-                                        Estampado Bolinha com Lacinhos - Cor Vermelho <br>
-                                        <b>
-                                            1 unidade(s) <br>
-                                            R$ 79,90
-                                        </b>
-                                    </h5>
-                                </div>                            
-                            </div>
-                        </li>
-                        <li class="list-group-item py-3">
-                            <div class="row g-3">
-                                <div class="col-4 col-md-3 col-lg-2">
-                                    <a href="#">
-                                        <img src="img/produtos/moletomfem.png" class="img-thumbnail">
-                                    </a>
-                                </div>
-                                <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
-                                    <h4>
-                                        <b><a href="#" class="text-decoration-none text-success">
-                                            Blusa de Moletom Feminina</a></b>
-                                    </h4>
-                                    <h5>
-                                        Capuz Manga Longa Super Herói - Batman Preto </br>
-                                        <b>
-                                            1 unidade(s) <br>
-                                            R$ 199,90
-                                        </b>
-                                    </h5>
-                                </div>                    
-                            </div>
-                        </li>
-                        <li class="list-group-item py-3">
-                            <div class="row g-3">
-                                <div class="col-4 col-md-3 col-lg-2">
-                                    <a href="#">
-                                        <img src="img/produtos/conjunto.png" class="img-thumbnail">
-                                    </a>
-                                </div>
-                                <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
-                                    <h4>
-                                        <b><a href="#" class="text-decoration-none text-success">
-                                            Conjunto Bebê Inverno Menina</a></b>
-                                    </h4>
-                                    <h5>
-                                        Casaco Plush Liso Calça Plush Estampado e Body Suedine Silk Coração - Natural <br>
-                                        <b>
-                                            1 unidade(s) <br>
-                                            R$ 116,20
-                                        </b>
-                                    </h5>
-                                </div>                            
-                            </div>
-                        </li>
-                        <li class="list-group-item pt-3 pb-0">
-                            <div class="text-end">
-                                <h4 class="text-dark mb-3">
-                                    Valor Total: R$ 396,00
-                                </h4>
-                                <a href="carrinho.html" class="btn btn-outline-success btn-lg mb-3">
-                                    Voltar ao Carrinho
-                                </a>
-                                <a href="confirmarendereco.html" class="btn btn-success btn-lg ms-2 mb-3">Continuar</a>
-                            </div>
-                        </li>
-                    </ul>
+                    <h1>Selecione o Endereço de Entrega</h1>
+                    <h3 class="mb-4">
+                        Após isso clique em <b>Continuar</b> para prosseguir para a <b>seleção da
+                            forma de pagamento</b>.
+                    </h3>
+                    <div class="d-flex justify-content-around flex-wrap border rounded-top pt-4 px-3">
+                        <div class="mb-4 mx-2 flex-even">
+                            <input type="radio" class="btn-check" name="endereco" 
+                                autocomplete="off" id="end1">
+                            <label class="btn btn-outline-success p-4 h-100 w-100" for="end1">
+                                <h3>
+                                    <b class="text-dark">Minha Casa</b><br>
+                                    <hr>
+                                    <b>Yago Augusto</b><br>
+                                   Avenida da Amizade, 0<br>
+                                    Paulo Afonso/BA<br>
+                                    CEP 48607-235
+                                </h3>
+                            </label>
+                        </div>
+                        <div class="mb-4 mx-2 flex-even">
+                            <input type="radio" class="btn-check" name="endereco" 
+                                autocomplete="off" id="end2">
+                            <label class="btn btn-outline-success p-4 h-100 w-100" for="end2">
+                                <h3>
+                                    <b class="text-dark">Meu Trabalho</b><br>
+                                    <hr>
+                                    <b>Yago Augusto</b><br>
+                                    Rua da Harmonia, S/N<br>
+                                   Paulo Afonso/BA<br>
+                                    CEP 48608490
+                                </h3>
+                            </label>
+                        </div>
+                        <div class="mb-4 mx-2 flex-even">
+                            <input type="radio" class="btn-check" name="endereco" 
+                                autocomplete="off" id="end3">
+                            <label class="btn btn-outline-success p-4 h-100 w-100" for="end3">
+                                <h3>
+                                    <b class="text-dark">Casa da Mãe</b><br>
+                                    <hr>
+                                    <b>Maria José</b><br>
+                                    Rua Iris Alagoense, 71<br>
+                                    Maceió/AL<br>
+                                    CEP 57051-370
+                                </h3>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="text-end border border-top-0 rounded-bottom p-4 pb-0">                    
+                        <a href="fechamento.html" class="btn btn-outline-success btn-lg mb-4">
+                            Voltar aos Itens
+                        </a>
+                        <a href="fechamento_pagamento.html" class="btn btn-success btn-lg ms-2 mb-4">Continuar</a>
+                    </div>
                 </div>
             </main>
 
@@ -230,7 +204,7 @@
                 </div>
             </footer>
         </div>
-        
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>
