@@ -42,8 +42,6 @@
         <link rel="stylesheet" href="css/style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <title>E-Commerce Guedes - Home</title>
-
-
     </head>
     <body>
         <div class="body-config d-flex flex-column ">
@@ -93,108 +91,113 @@
 
             <main class="flex-fill">
                 <div class="container">
-                    <h1>Informe seus dados, por favor</h1>
-                    <hr>
-                    <form method="get"  id="cadastro" name="cadastro" action="confirmarcadastro.html" onsubmit="return validarSenha();" class="mt-3">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6">
-                                <fieldset class="row gx-3">
-                                    <legend>Dados Pessoais</legend>
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" type="text" id="txtNome" placeholder=" " autofocus />
-                                        <label for="txtNome">Nome</label>
-                                    </div>
-                                    <div class="form-floating mb-3 col-md-6 col-xl-4">
-                                        <input class="form-control" placeholder="CPF" onkeyup="cpfCheck(this)" maxlength="14"  required name="txtCPF" onkeydown="javascript: fMasc( this, mCPF );" >
-                                        <span id="cpfResponse" type="text" id="cpf" />
-                                        <label for="txtCPF">CPF</label>
-                                    </div>
-                                    <div class="form-floating mb-3 col-md-6 col-xl-4">
-                                        <input class="form-control" type="date" id="txtDataNascimento" placeholder=" " />
-                                        <label for="txtDataNascimento" class="d-inline d-sm-none d-md-inline d-lg-none">Data
-                                            Nascimento</label>
-                                        <label for="txtDataNascimento" class="d-none d-sm-inline d-md-none d-lg-inline">Data
-                                            de Nascimento</label>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="row gx-3">
-                                    <legend>Dados de Acesso</legend>
-                                    <div class="form-floating mb-3 col-md-7">
-                                        <input class="form-control" type="email" id="txtEmail" placeholder=" " required/>
-                                        <label for="txtEmail">E-mail</label>
-                                    </div>
-                                    <div class="form-floating mb-3 col-md-5">
-                                        <input class="form-control" placeholder=" " onkeyup="mask(this, mphone)" maxlength="15" type="text" id="txtTelefone" required/>
-                                        <label for="txtTelefone">Celular</label>
-                                    </div>
-                                </fieldset>                                   
-                                 <fieldset class="row gx-3">
-                                        <legend>Senha</legend>
-                                        <div class="form-floating mb-3 col-lg-6">
-                                            <input class="form-control" type="password" name="senha" id="senha" placeholder=" " required />
-                                            <label for="txtSenha">Senha</label>
-                                        </div>
-                                        <div class="form-floating mb-3 col-lg-6">
-                                            <input class="form-control" type="password" name="confirmarSenha" id="confirmarSenha" placeholder=" " required />
-                                            <label class="form-label" for="txtConfirmacaoSenha">Confirmação da Senha</label>
-                                        </div>
-                                    </fieldset>
-                                
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <fieldset class="row gx-3">
-                                    <legend>Endereço</legend>
-                                    <div class="form-floating mb-3 col-md-6 col-lg-4">
-                                        <input name="cep" maxlength="9" value="" class="form-control" type="text" id="cep" placeholder=" "onblur="pesquisacep(this.value);" required/>
-                                        <label for="txtCEP">CEP</label>
-                                    </div>
-                                    <div class="form-floating mb-3 col-md-4">
-                                        <input name="rua" class="form-control" type="text" size="60" id="rua" placeholder=" " required/>
-                                        <label for="txtRua">Rua</label>
-                                    </div>
-                                    <div class="form-floating mb-3 col-md-4">
-                                            <input class="form-control" type="text" id="bairro" placeholder=" " required/>
-                                            <label for="txtBairro">Bairro</label>
-                                        </div>
-                                        <div class="form-floating mb-3 col-md-8">
-                                            <input class="form-control" type="text" id="cidade" placeholder=" " required />
-                                            <label for="txtCidade">UF</label>
-                                        </div>
-                                        <div class="form-floating mb-3 col-md-4">
-                                                <input class="form-control" type="text" id="uf" placeholder=" " required/>
-                                                <label for="txtCidade">Cidade</label>
-                                            </div>
-                                    <div class="clearfix"></div>
-                                    <div class="form-floating mb-3 col-md-4">
-                                        <input class="form-control" type="text" id="txtNumero" placeholder=" " required/>
-                                        <label for="txtNumero">Número</label>
-                                    </div>
-                                    <div class="form-floating mb-3 col-md-8">
-                                        <input class="form-control" type="text" id="Complemento" placeholder=" " required />
-                                        <label for="txtComplemento">Complemento</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" type="text" id="txtReferencia" placeholder=" " />
-                                        <label for="txtReferencia">Referência</label>
-                                    </div>
-                                </fieldset>
+                    <h1>Minha Conta</h1>
+                    <div class="row gx-3 mb-3">
+                        <div class="col-4">
+                            <div class="list-group">
+                                <a href="/cliente_dados.html" class="list-group-item list-group-item-action">
+                                    <i class="bi-person fs-6"></i> Dados Pessoais
+                                </a>
+                                <a href="/cliente_contatos.html" class="list-group-item list-group-item-action">
+                                    <i class="bi-mailbox fs-6"></i> Contatos
+                                </a>
+                                <a href="/cliente_endereco.html" class="list-group-item list-group-item-action">
+                                    <i class="bi-house-door fs-6"></i> Endereço
+                                </a>
+                                <a href="/cliente_pedidos.html" class="list-group-item list-group-item-action">
+                                    <i class="bi-truck fs-6"></i> Pedidos
+                                </a>
+                                <a href="/cliente_favoritos.html" class="list-group-item list-group-item-action bg-success text-light">
+                                    <i class="bi-heart fs-6"></i> Favoritos
+                                </a>
+                                <a href="/cliente_senha.html" class="list-group-item list-group-item-action">
+                                    <i class="bi-lock fs-6"></i> Alterar Senha
+                                </a>
+                                <a href="/index.html" class="list-group-item list-group-item-action">
+                                    <i class="bi-door-open fs-6"></i> Sair
+                                </a>
                             </div>
                         </div>
-                        <hr />
-                        <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                Desejo receber informações sobre promoções.
-                            </label>
-                        </div>
-                        <div class="mb-3 text-left">
-                            <a class="btn btn-lg btn-light btn-outline-success" href="">Cancelar</a>
-                            <input type="submit" value="Criar meu cadastro" class="btn btn-lg btn-success" />
-                        </div>
-                    </form>
+                        <div class="col-8">
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                                    <div class="card text-center bg-light">
+                                        <a href="#" class="position-absolute end-0 p-2 text-success">
+                                            <i class="bi-emoji-heart-eyes-fill" style="font-size: 24px; line-height: 24px;"></i>
+                                        </a>
+                                        <img src="img/produtos/tenismasc.png" class="card-img-top">
+                                        <div class="card-header">
+                                            R$ 199,90
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tênis Casual Masculino</h5>
+                                            <p class="card-text truncar-3l">
+                                                WDE02 Redley Azul Aço Em Lona Costurada
+                                            </p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="carrinho.html" class="btn btn-success mt-2 d-block">
+                                                Adicionar ao Carrinho
+                                            </a>
+                                            <small class="text-success">79 un. em estoque</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                                    <div class="card text-center bg-light">
+                                        <a href="#" class="position-absolute end-0 p-2 text-success">
+                                            <i class="bi-emoji-heart-eyes-fill" style="font-size: 24px; line-height: 24px;"></i>
+                                        </a>
+                                        <img src="img/produtos/regatafem.png" class="card-img-top">
+                                        <div class="card-header">
+                                            R$ 49,90
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Regata Feminina Malha Básica</h5>
+                                            <p class="card-text truncar-3l">
+                                                Regata Feminina Malha Básica by Ecommerce Guedes
+                                            </p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="carrinho.html" class="btn btn-success mt-2 d-block">
+                                                Adicionar ao Carrinho
+                                            </a>
+                                            <small class="text-success">17 un. em estoque</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                                    <div class="card text-center bg-light">
+                                        <a href="#" class="position-absolute end-0 p-2 text-success">
+                                            <i class="bi-emoji-heart-eyes-fill" style="font-size: 24px; line-height: 24px;"></i>
+                                        </a>
+                                        <img src="img/produtos/conjunto.png" class="card-img-top">
+                                        <div class="card-header">
+                                            R$ 116,20
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Conjunto Bebê Inverno Menina</h5>
+                                            <p class="card-text truncar-3l">
+                                                Casaco Plush Liso Calça Plush Estampado e Body Suedine Silk Coração - Natural
+                                            </p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="carrinho.html" class="btn btn-success mt-2 d-block">
+                                                Adicionar ao Carrinho
+                                            </a>
+                                            <small class="text-success">121 un. em estoque</small>
+                                        </div>
+                                    </div>
+                                </div>
+    
 
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </main>
+
             <footer class="border-top text-muted bg-light">
                 <div class="container">
                     <div class="row py-4">
@@ -251,8 +254,8 @@
             </footer>
         </div>
 
-        
-        <script type="text/javascript" src="cadastro.js"></script>
+
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>
